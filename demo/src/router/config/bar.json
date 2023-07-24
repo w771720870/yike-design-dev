@@ -52,6 +52,10 @@
         {
           "name": "Switch 开关",
           "src": "switch"
+        },
+        {
+          "name": "DatePicker 日期选择器",
+          "src": "date-picker"
         }
       ]
     },

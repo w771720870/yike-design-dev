@@ -1,0 +1,89 @@
+.yk-date-picker {
+  width: auto; /**为了消除lessRule报错，暂时保留**/
+}
+
+.date-picker-header {
+  width: max-content;
+}
+
+.header-input {
+  border: 1px solid @gray-4;
+  border-radius: @radius-s;
+  input {
+    margin: 0.5em 0.8em;
+    width: 10em;
+    font-size: small;
+    border: none;
+    color: @font-color-l;
+    background-color: @bg-color-l;
+    outline: none;
+  }
+  &.focus {
+    border: 1px @pcolor solid;
+  }
+  &:hover {
+    .focus();
+  }
+}
+
+.date-picker-dropdown-container {
+  position: absolute;
+  z-index: 1;
+  margin: 0.5em 0;
+  border-radius: @radius-m;
+  background-color: @bg-color-l;
+  box-shadow: @shadow-m;
+  user-select: none;
+}
+
+.dropdown-panel {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.dropdown-item {
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+}
+.dropdown-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dropdown-head {
+  width: 3em;
+  height: 3em;
+  line-height: 2.5em;
+}
+.dropdown-item-date {
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  &:hover {
+    border-radius: @radius-m;
+    color: @bg-color-l;
+    background-color: @pcolor;
+  }
+}
+.other-month {
+  color: @gray-4;
+}
+.today-item {
+  border: 0.1px solid @pcolor;
+  border-radius: @radius-m;
+}
+.selected-item {
+  border-radius: @radius-m;
+  color: aliceblue;
+  background-color: @pcolor;
+}
+.dropdown-today-button {
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+.hidden {
+  display: none;
+}
